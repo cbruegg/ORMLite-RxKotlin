@@ -25,7 +25,7 @@
         <dependency>
             <groupId>com.github.cbruegg</groupId>
             <artifactId>ormlite-rxjava</artifactId>
-            <version>v1.0.1</version>
+            <version>v1.0.2</version>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
@@ -35,7 +35,7 @@
         <dependency>
             <groupId>com.github.cbruegg</groupId>
             <artifactId>ormlite-core</artifactId>
-            <version>ormlite-core-4.49-plus</version>
+            <version>ormlite-core-4.49-plus-1.0</version>
         </dependency>
     </dependencies>
 

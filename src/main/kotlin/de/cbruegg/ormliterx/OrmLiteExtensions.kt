@@ -6,6 +6,7 @@ import com.j256.ormlite.stmt.QueryBuilder
 import com.j256.ormlite.stmt.RuntimeExceptionQueryBuilder
 import com.j256.ormlite.stmt.RuntimeExceptionWhere
 import com.j256.ormlite.stmt.Where
+import org.omg.CORBA.Object
 import rx.Observable
 
 /**
@@ -77,3 +78,23 @@ fun <T, ID> Dao<T, ID>.queryForEqRx(columnName: String, value: Any): Observable<
  * @see RuntimeExceptionDao#queryForEq(String, Object)
  */
 fun <T, ID> RuntimeExceptionDao<T, ID>.queryForEqRx(columnName: String, value: Any): Observable<List<T>> = OrmLiteRx.queryForEq(this, columnName, value)
+
+/**
+ * @see RawQueryBuilder#selectRaw(Dao, String, Object[])
+ */
+fun <T, ID> Dao<T, ID>.queryRawRx(statement: String, vararg objects:Object): Observable<List<T>> = OrmLiteRx.queryRaw(this, statement, objects)
+
+/**
+ * @see RawQueryBuilder#selectRaw(Dao, String, Object[])
+ */
+fun <T, ID> RuntimeExceptionDao<T, ID>.queryRawRx(statement: String, vararg objects:Object): Observable<List<T>> = OrmLiteRx.queryRaw(this, statement, objects)
+
+/**
+ * @see RawQueryBuilder#selectLongRaw(Dao, String, Object[])
+ */
+fun <T, ID> Dao<T, ID>.queryLongRawRx(statement: String, vararg objects:Object): Observable<Long> = OrmLiteRx.queryLongRaw(this, statement, objects)
+
+/**
+ * @see RawQueryBuilder#selectLongRaw(Dao, String, Object[])
+ */
+fun <T, ID> RuntimeExceptionDao<T, ID>.queryLongRawRx(statement: String, vararg objects:Object): Observable<Long> = OrmLiteRx.queryLongRaw(this, statement, objects)
